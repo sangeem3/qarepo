@@ -16,6 +16,8 @@ WebDriver driver=new FirefoxDriver();
 
 driver.get("http://www.tizag.com/javascriptT/javascriptalert.php");
 
+//for 3.0 we need to use ghecko driver
+
 driver.findElement(By.xpath("html/body/table[3]/tbody/tr[1]/td[2]/table/tbody/tr/td/div[4]/form/input")).click();
 
 System.out.println(driver.switchTo().alert().getText());

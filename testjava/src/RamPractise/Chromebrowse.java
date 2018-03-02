@@ -24,14 +24,15 @@ public class Chromebrowse {
        
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Ramnew\\Desktop\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-      
-	driver.get("https://www.facebook.com/");  
+		
+	driver.get("https://google.com/");  
 	System.out.println(driver.getTitle());
-	driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ramanthan.shanmugam@gmail.com");
-	driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Sangeeram143!");
-	driver.findElement(By.xpath("//input[@value='Log In']")).click();
-	
-		
-		
-	}
+	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+	WebDriverWait w = new WebDriverWait(driver,30);
+	w.until(ExpectedConditions.elementToBeClickable(locator));
+
+	Connection con=DriverManager.getConnection(url, user, password)
+	Statement s=con.createStatement();
+	Resultset rs=s.e
+}
 }

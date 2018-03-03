@@ -33,6 +33,5 @@ public class Chromebrowse {
 
 	Connection con=DriverManager.getConnection(url, user, password)
 	Statement s=con.createStatement();
-	Resultset rs=s.e
 }
 }

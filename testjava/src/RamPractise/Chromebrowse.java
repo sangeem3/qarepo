@@ -1,8 +1,21 @@
 package RamPractise;
 
+import java.beans.Statement;
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.thoughtworks.selenium.Wait;
 
 public class Chromebrowse {
 
@@ -11,14 +24,15 @@ public class Chromebrowse {
        
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Ramnew\\Desktop\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-      
-	driver.get("https://www.facebook.com/");  
+		
+	driver.get("https://google.com/");  
 	System.out.println(driver.getTitle());
-	driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ramanthan.shanmugam@gmail.com");
-	driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Sangeeram143!");
-	driver.findElement(By.xpath("//input[@value='Log In']")).click();
-	
-		
-		
-	}
+	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+	WebDriverWait w = new WebDriverWait(driver,30);
+	w.until(ExpectedConditions.elementToBeClickable(locator));
+
+	Connection con=DriverManager.getConnection(url, user, password)
+	Statement s=con.createStatement();
+	Resultset rs=s.e
+}
 }

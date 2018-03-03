@@ -22,6 +22,6 @@ public class chrometest {
 	driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ramanthan.shanmugam@gmail.com");
 	driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Sangeeram143!");
 	driver.findElement(By.xpath("//input[@value='Log In']")).click();
-        driver.manage.timeouts.implicitlywait(driver,10);
+    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 }

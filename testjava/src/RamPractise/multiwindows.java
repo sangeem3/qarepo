@@ -17,9 +17,10 @@ public class multiwindows {
 		
 	driver.get("https://accounts.google.com/SignUp?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default");
 	driver.getTitle();
-	Set<String>sti=driver.getWindowHandles();
-	Iterator ite=sti.iterator();
+	java.util.Set<String> sti=driver.getWindowHandles();
+	Iterator<String> ite=sti.iterator();
 	String parent =ite.next();
 	String child =ite.next();
-	driver.switchTo().frame(child);	}
+	driver.switchTo().frame(child);
+	}
 }

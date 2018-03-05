@@ -15,10 +15,10 @@ public class reverse {
 		M=M+s.charAt(i);
 		
 	}
-		System.out.println(M);
+	
 		if (s.equals(M))
 		{
-			System.out.println("Given string is Palindrome");
+			
 		}
 		else
 		{

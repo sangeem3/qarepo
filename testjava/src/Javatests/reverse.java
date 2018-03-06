@@ -12,9 +12,9 @@ public class reverse {
 		for (int i = s.length() - 1; i >= 0; i--) {
 
 			M = M + s.charAt(i);
-
+			System.out.println(M);
 		}
-
+		System.out.println(M);
 		if (s.equals(M)) {
 			System.out.println("Given string is not a palindrome");
 		} else {
